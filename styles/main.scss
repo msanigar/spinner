@@ -1,0 +1,44 @@
+@import 'milligram/milligram';
+
+// spinner 1
+
+$color-primary: #ccc;
+
+.animation {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 250px;
+  height: 250px;
+}
+
+.anim1 {
+  width: 200px;
+  height: 200px;
+  border-top: 2px solid $color-primary;
+  border-right: 10px solid #222;
+  animation: anim1 1s infinite linear;
+  -webkit-animation: anim1 1s infinite linear;
+  border-radius: 100%;
+  @-webkit-keyframes anim1 {
+    to {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+    }
+  }
+@keyframes anim1 {
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    }
+  }   
+}
+
+// progress
+
+.prog {
+    position: absolute;
+    font-size: 2rem;
+}
