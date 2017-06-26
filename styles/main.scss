@@ -12,13 +12,14 @@ $color-primary: #ccc;
   float: left;
   width: 250px;
   height: 250px;
+  position: relative;
 }
 
 .anim1 {
   width: 200px;
   height: 200px;
   border-top: 2px solid $color-primary;
-  border-right: 10px solid #222;
+  border-right: 10px solid;
   animation: anim1 1s infinite linear;
   -webkit-animation: anim1 1s infinite linear;
   border-radius: 100%;
@@ -34,6 +35,43 @@ $color-primary: #ccc;
     -webkit-transform: rotate(360deg);
     }
   }   
+}
+
+.anim2 {
+  height: 200px;
+  animation: anim2 5s infinite;
+  -webkit-animation: anim2 5s infinite;
+  @-webkit-keyframes anim2 {
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes anim2 {
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }  
+}
+
+.anim-bounce {
+  width: 200px;
+  height: 200px;
+  animation: anim-bounce 1s infinite linear;
+  -webkit-animation: anim-bounce 1s infinite linear;
+  border-radius: 100%;
+  position: absolute;
+  @-webkit-keyframes anim-bounce {
+    0% { bottom: 5px; }
+    25% { bottom: 15px; }
+    75% { bottom: 15px; }
+    50% { bottom: 20px; }
+    100% { bottom: 0; }
+  }
+  @keyframes anim-bounce {
+    0% { bottom: 5px; }
+    25% { bottom: 15px; }
+    75% { bottom: 15px; }
+    50% { bottom: 20px; }
+    100% { bottom: 0; }
+  }  
 }
 
 // progress

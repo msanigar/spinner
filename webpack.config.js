@@ -15,6 +15,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/build/'
   },
+  watch: true,
   module: {
     loaders: [
       {
@@ -29,6 +30,9 @@ module.exports = {
           fallback: "style-loader",
           loader: "css-loader!sass-loader",
         }),
+      },
+      { 
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'svg-url-loader?limit=10000&mimetype=image/svg+xml' 
       }
     ]
   },
