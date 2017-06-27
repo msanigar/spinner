@@ -458,7 +458,8 @@ img {
   justify-content: center;
   float: left;
   width: 250px;
-  height: 250px; }
+  height: 250px;
+  position: relative; }
 
 .anim1 {
   width: 200px;
@@ -480,31 +481,93 @@ img {
     -webkit-transform: rotate(360deg); } }
 
 .anim2 {
-  width: 200px;
   height: 200px;
-  animation: anim2 1s infinite;
-  -webkit-animation: anim2 1s infinite;
-  border-radius: 100%; }
+  animation: anim2 5s infinite;
+  -webkit-animation: anim2 5s infinite; }
 
 @-webkit-keyframes anim2 {
+  75% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes anim2 {
+  75% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.anim-bounce {
+  width: 200px;
+  height: 200px;
+  animation: anim-bounce 1s infinite linear;
+  -webkit-animation: anim-bounce 1s infinite linear;
+  border-radius: 100%;
+  position: absolute; }
+
+@-webkit-keyframes anim-bounce {
   0% {
     bottom: 5px; }
-  25%, 75% {
+  25% {
+    bottom: 15px; }
+  75% {
     bottom: 15px; }
   50% {
     bottom: 20px; }
   100% {
     bottom: 0; } }
 
-@keyframes anim2 {
+@keyframes anim-bounce {
   0% {
     bottom: 5px; }
-  25%, 75% {
+  25% {
+    bottom: 15px; }
+  75% {
     bottom: 15px; }
   50% {
     bottom: 20px; }
   100% {
     bottom: 0; } }
+
+.anim3 {
+  width: 250px;
+  max-width: 200px;
+  height: 8px;
+  position: absolute;
+  border-radius: 4px;
+  background: honeydew;
+  overflow: hidden; }
+  .anim3:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: #7fba23;
+    animation: load 11s linear; }
+
+@keyframes load {
+  0% {
+    width: 0; }
+  10% {
+    width: 5%; }
+  20% {
+    width: 15%; }
+  30% {
+    width: 25%; }
+  40% {
+    width: 30%; }
+  50% {
+    width: 45%; }
+  60% {
+    width: 50%; }
+  70% {
+    width: 75%; }
+  80% {
+    width: 85%; }
+  90% {
+    width: 95%; }
+  100% {
+    width: 100%; } }
 
 .prog {
   position: absolute;
