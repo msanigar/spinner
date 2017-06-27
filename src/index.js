@@ -3,38 +3,42 @@ import Spinner from './App.js';
 // instance 1
 
 window.spinnerInstance1 = new Spinner({
-  entry: '.entry'
+  entry: '.entry',
+  spinnerColor: '#7fba23'
 });
 
 setTimeout(function(){
   spinnerInstance1.create();
 }, 1000);
 
-setTimeout(function(){
-  spinnerInstance1.destroy('.entry');
-}, 12000);
+// setTimeout(function(){
+//   spinnerInstance1.destroy('.entry');
+// }, 12000);
 
 // instance 2
 
 window.spinnerInstance2 = new Spinner({
   entry: '.entryTwo',
-  primaryColor: '#7fba23',
-  secondayColor: 'blue',
-  type: 'anim1',
-  loader: true
+  type: 'logo',
+  logoColor: '#7fba23',
+  spinnerColor: '#0081b9'
 });
 
 setTimeout(function(){
   spinnerInstance2.create();
 }, 1000);
 
+// setTimeout(function(){
+//   spinnerInstance2.destroy('.entryTwo');
+// }, 12000);
+
 // instance 3
 
 window.spinnerInstance3 = new Spinner({
   entry: '.entryThree',
-  type: 'anim2',
-  loader: false,
-  primaryColor: '#7fba23'
+  spinnerColor: '#7fba23',
+  percentColor: '#0081b9',
+  type: 'loader'
 });
 
 setTimeout(function(){
@@ -42,14 +46,17 @@ setTimeout(function(){
 }, 1000);
 
 setTimeout(function(){
-  spinnerInstance1.destroy('.entryThree');
+  spinnerInstance3.destroy('.entryThree');
 }, 12000);
+
 
 // instance 4
 
 window.spinnerInstance4 = new Spinner({
   entry: '.entryFour',
-  type: "anim3"
+  type: 'percent',
+  percentColor: '#7fba23',
+  spinnerColor: '#0081b9'
 });
 
 setTimeout(function(){
@@ -59,3 +66,10 @@ setTimeout(function(){
 setTimeout(function(){
   spinnerInstance4.destroy('.entryFour');
 }, 12000);
+
+// test instance
+
+window.testInstance = new Spinner({
+  entry: '.test',
+  spinnerColor: 'FireBrick'
+});

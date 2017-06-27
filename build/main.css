@@ -451,6 +451,9 @@ img {
 .float-right {
   float: right; }
 
+.column.center {
+  margin: 0 auto; }
+
 .animation {
   box-sizing: border-box;
   display: flex;
@@ -481,7 +484,8 @@ img {
     -webkit-transform: rotate(360deg); } }
 
 .anim2 {
-  height: 200px;
+  height: 100px;
+  margin-bottom: 50px;
   animation: anim2 5s infinite;
   -webkit-animation: anim2 5s infinite; }
 
@@ -498,8 +502,9 @@ img {
     transform: rotate(360deg); } }
 
 .anim-bounce {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 60px;
   animation: anim-bounce 1s infinite linear;
   -webkit-animation: anim-bounce 1s infinite linear;
   border-radius: 100%;
@@ -530,19 +535,20 @@ img {
     bottom: 0; } }
 
 .anim3 {
-  width: 250px;
-  max-width: 200px;
+  width: 150px;
+  max-width: 150px;
   height: 8px;
   position: absolute;
   border-radius: 4px;
   background: honeydew;
+  color: #7fba23;
   overflow: hidden; }
   .anim3:after {
     content: '';
     display: block;
     width: 100%;
     height: 8px;
-    background: #7fba23;
+    background-color: #0081b9;
     animation: load 11s linear; }
 
 @keyframes load {

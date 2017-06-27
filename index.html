@@ -11,23 +11,44 @@
 
 <body>
 
-  <div class="container">
+  <section class="container">
 
     <div class="row main">
 
-      <div class="column column-80">
-				<h1>Welcome</h1>
-				<p class="column column-50 margin-center">Spinner 1:</p>
+      <div class="column column-80 center">
+				<h1>AO Spinner Library</h1>
+				<p>Usage:</p>
+        <pre><code>
+        <strong>&bull; define a new instance of Spinner, and pass settings as obj</strong>
+        
+        window.MY_NEW_SPINNER = new Spinner({
+          entry: '.MY_ENTRY_ELEMENT',
+          type: 'logo',
+          logoColor: '#7fba23',
+          spinnerColor: '#7fba23'
+        });
+
+        <strong>&bull; call the create method</strong>
+
+        MY_NEW_SPINNER.create();
+
+        <strong>&bull; if you use type of percent it will self destruct, otherwise you can manually call the destroy method!</strong>
+
+        MY_NEW_SPINNER.destroy('.MY_ENTRY_ELEMENT');
+
+        <strong>Try it yourself using the console!  Just type: <em>testInstance.create();</em></strong>
+        </code></pre>
 
         <div class="entry" style="height: 250px;width: 250px;float: left;"></div>
         <div class="entryTwo" style="height: 250px;width: 250px;float: left;"></div>
         <div class="entryThree" style="height: 250px;width: 250px;float: left;"></div>
         <div class="entryFour" style="height: 250px;width: 250px;float: left;"></div>
+        <div class="test" style="height: 250px;width: 250px;float: left;"></div>
 			</div>
 
     </div>
 
-  </div>
+  </section>
 
   <script src="build/bundle.js"></script>
 
