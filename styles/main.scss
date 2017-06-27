@@ -74,6 +74,39 @@ $color-primary: #ccc;
   }  
 }
 
+
+.anim3 {
+  width: 250px;
+  max-width: 200px;
+  height: 8px;
+  position: absolute;
+  border-radius: 4px;
+  background: honeydew;
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background: #7fba23;
+    animation: load 11s linear;
+  }
+
+  @keyframes load {
+    0% { width: 0; }
+    10% { width: 5%; }
+    20% { width: 15%; }
+    30% { width: 25%; }
+    40% { width: 30%; }
+    50% { width: 45%; }
+    60% { width: 50%; }
+    70% { width: 75%; }
+    80% { width: 85%; }
+    90% { width: 95%; }
+    100% { width: 100%; }
+  }
+}
+
 // progress
 
 .prog {

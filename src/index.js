@@ -44,3 +44,18 @@ setTimeout(function(){
 setTimeout(function(){
   spinnerInstance1.destroy('.entryThree');
 }, 12000);
+
+// instance 4
+
+window.spinnerInstance4 = new Spinner({
+  entry: '.entryFour',
+  type: "anim3"
+});
+
+setTimeout(function(){
+  spinnerInstance4.create();
+}, 1000);
+
+setTimeout(function(){
+  spinnerInstance4.destroy('.entryFour');
+}, 12000);
