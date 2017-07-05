@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var extractCSS = new ExtractTextPlugin('[name].css');
+var autoprefixer  = require('autoprefixer');
 
 module.exports = {
   devtool: 'eval',
@@ -15,7 +15,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/build/'
   },
-  watch: true,
   module: {
     loaders: [
       {
@@ -28,13 +27,20 @@ module.exports = {
         test: /\.scss$/, 
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          loader: "css-loader!sass-loader",
+          loader: "css-loader!sass-loader!postcss-loader",
         }),
       },
       { 
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, use: 'svg-url-loader?limit=10000&mimetype=image/svg+xml' 
       }
-    ]
+    ],
   },
-  plugins: [ extractCSS ]
+  plugins: [
+    new ExtractTextPlugin("[name].css"),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+          postcss: [autoprefixer]
+      }
+    })
+  ]
 }

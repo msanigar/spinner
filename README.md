@@ -21,6 +21,13 @@ open http://localhost:3000
 
 ```
 
+# Tests
+``` bash
+
+npm run test
+
+```
+
 # Build
 ``` bash
 

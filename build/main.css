@@ -455,58 +455,69 @@ img {
   margin: 0 auto; }
 
 .animation {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   float: left;
   width: 250px;
   height: 250px;
   position: relative; }
 
-.anim1 {
+.spinner {
   width: 200px;
   height: 200px;
   border-top: 2px solid #ccc;
   border-right: 10px solid;
-  animation: anim1 1s infinite linear;
-  -webkit-animation: anim1 1s infinite linear;
+  -webkit-animation: spinner 1s infinite linear;
+  animation: spinner 1s infinite linear;
   border-radius: 100%; }
 
-@-webkit-keyframes anim1 {
+@-webkit-keyframes spinner {
   to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
-
-@keyframes anim1 {
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg); } }
-
-.anim2 {
-  height: 100px;
-  margin-bottom: 50px;
-  animation: anim2 5s infinite;
-  -webkit-animation: anim2 5s infinite; }
-
-@-webkit-keyframes anim2 {
-  75% {
-    transform: rotate(0deg); }
-  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-@keyframes anim2 {
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.logo {
+  height: 100px;
+  margin-bottom: 50px;
+  -webkit-animation: logo 5s infinite;
+  animation: logo 5s infinite; }
+
+@-webkit-keyframes logo {
   75% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes logo {
+  75% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 .anim-bounce {
   width: 100px;
   height: 100px;
   margin-bottom: 60px;
-  animation: anim-bounce 1s infinite linear;
   -webkit-animation: anim-bounce 1s infinite linear;
+  animation: anim-bounce 1s infinite linear;
   border-radius: 100%;
   position: absolute; }
 
@@ -534,7 +545,7 @@ img {
   100% {
     bottom: 0; } }
 
-.anim3 {
+.loader {
   width: 150px;
   max-width: 150px;
   height: 8px;
@@ -543,13 +554,38 @@ img {
   background: honeydew;
   color: #7fba23;
   overflow: hidden; }
-  .anim3:after {
+  .loader:after {
     content: '';
     display: block;
     width: 100%;
     height: 8px;
     background-color: #0081b9;
+    -webkit-animation: load 11s linear;
     animation: load 11s linear; }
+
+@-webkit-keyframes load {
+  0% {
+    width: 0; }
+  10% {
+    width: 5%; }
+  20% {
+    width: 15%; }
+  30% {
+    width: 25%; }
+  40% {
+    width: 30%; }
+  50% {
+    width: 45%; }
+  60% {
+    width: 50%; }
+  70% {
+    width: 75%; }
+  80% {
+    width: 85%; }
+  90% {
+    width: 95%; }
+  100% {
+    width: 100%; } }
 
 @keyframes load {
   0% {
@@ -575,6 +611,6 @@ img {
   100% {
     width: 100%; } }
 
-.prog {
+.percent {
   position: absolute;
   font-size: 2rem; }
