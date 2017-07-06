@@ -564,7 +564,8 @@ img {
   -o-animation: anim-bounce 1s infinite linear;
   animation: anim-bounce 1s infinite linear;
   border-radius: 100%;
-  position: absolute; }
+  position: absolute;
+  left: 75px; }
 
 @-webkit-keyframes anim-bounce {
   0% {
@@ -622,7 +623,8 @@ img {
   border-radius: 4px;
   background: honeydew;
   color: #7fba23;
-  overflow: hidden; }
+  overflow: hidden;
+  left: 50px; }
   .loader:after {
     content: '';
     display: block;
@@ -732,4 +734,6 @@ img {
 
 .percent {
   position: absolute;
-  font-size: 2rem; }
+  font-size: 2rem;
+  left: 110px;
+  top: 110px; }

@@ -73,11 +73,3 @@ window.testInstance = new Spinner({
   entry: '.test',
   spinnerColor: 'FireBrick'
 });
-
-if(navigator.appVersion.indexOf("MSIE 9.")!=-1) {
-  fallBackSpinner();
-}
-
-function fallBackSpinner() {
-  console.log("looks like you're using IE9!  we'll serve you a compatible loading spinner...");
-}
