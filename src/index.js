@@ -73,3 +73,18 @@ window.testInstance = new Spinner({
   entry: '.test',
   spinnerColor: 'FireBrick'
 });
+
+// fall back
+
+// window.spinnerInstance5 = new Spinner({
+//   entry: '.entryFive',
+//   fallback: 'true'
+// });
+
+// setTimeout(function(){
+//   spinnerInstance5.create();
+// }, 1000);
+
+// setTimeout(function(){
+//   spinnerInstance5.destroy('.entryFive');
+// }, 12000);
